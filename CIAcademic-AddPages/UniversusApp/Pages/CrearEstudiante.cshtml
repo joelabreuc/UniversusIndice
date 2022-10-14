@@ -1,5 +1,5 @@
 ﻿@page
-@model CIAcademicApp.Pages.RetirarModel
+@model CIAcademicApp.Pages.CrearEstudianteModel
 @{
 }
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
 <body style="font-family: system-ui;">
 <nav class="navbar navbar-light navbar-expand-md fixed-top py-3" style="font-family: system-ui; font-weight: bold; background: #ffffff;">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="VistaUsuario">
+        <a class="navbar-brand d-flex align-items-center" href="VistaAdministrador">
             <img src="/assets/img/logo.png" alt="">
         </a>
         <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
@@ -35,42 +35,25 @@
         <div class="collapse navbar-collapse" id="navcol-2">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link green-background course-pointer" aria-expanded="false" data-bs-toggle="dropdown">Perfil</a>
+                    <a class="dropdown-toggle nav-link  course-pointer" aria-expanded="false" data-bs-toggle="dropdown" href="#">Perfil</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item green-background" href="VistaUsuario">
-                            <i class="far fa-user-circle icon-margin"></i>Perfil
-                        </a>
-                        <a class="dropdown-item" href="SeleccionarAsignatura">
-                            <i class="fas fa-tasks icon-margin"></i>Seleccionar Asignaturas
-                        </a>
-                        <a class="dropdown-item" href="HistorialAcademico">
-                            <i class="far fa-file-alt icon-margin"></i>Historial Academico
-                        </a>
-                        <a class=" green-background dropdown-item" href="Retirar">
-                            <i class="far fa-user-circle icon-margin"></i>Retirar Asignatura
-                        </a>
-                        <a class="dropdown-item" href="Index">
-                            <i class="icon ion-android-exit icon-margin"></i>Cerrar Sesion
-                        </a>
+                        <a class="dropdown-item" href="Index"><i class="far fa-user-circle icon-margin"></i>Cerrar Sesion</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Calificaciones">Calificaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="AsignaturasEstudiante">Asignaturas</a>
+                    <a class=" green-background nav-link active" href="UsuariosAdministrador">Usuarios</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 <section class="profile">
-    <h1 class="d-flex justify-content-center margin-heading" data-aos="fade-down" style="padding-bottom: 66px; font-family: system-ui; text-align: center;">Retirar Asignaturas</h1>
+    <h1 class="d-flex justify-content-center margin-heading" data-aos="fade-down" style="padding-bottom: 66px; font-family: system-ui; text-align: center;">Crear Estudiante</h1>
     <div class="col-md-10 offset-md-1" style="margin: 0px; margin-bottom: 28px; width: 100%;">
         <div class="card m-auto" style="max-width: 850px; border-radius: 21px; border: 3px solid rgb(0, 4, 7); width: 100%;">
             <div class="card-body flex-grow-0" style="width: 100%;">
                 <form class="d-flex align-items-center">
-                    <i class="fas fa-search d-none d-sm-block h4 text-body m-0"></i><input class="form-control form-control-lg flex-shrink-1 form-control-borderless" type="search" placeholder="Buscar ID" name="search"><button class="btn btn-success btn-lg" type="submit" style="background: #FF9F1C; font-weight: bold; border-radius: 12px; color: rgb(0, 0, 0);">Buscar</button>
+                    <i class="fas fa-search d-none d-sm-block h4 text-body m-0"></i><input class="form-control form-control-lg flex-shrink-1 form-control-borderless" type="search" placeholder="Buscar ID" name="search"><button class="btn btn-success btn-lg" type="submit" style="background: black; font-weight: bold; border-radius: 12px; color: white;">Buscar</button>
                 </form>
             </div>
         </div>
@@ -78,30 +61,31 @@
     <div class="container padding-container" style="background: red; padding-bottom: 41px;">
         <section class="flex-column justify-content-center align-items-center" style="background: white; padding: 20px; border-radius: 15px; width: auto; height: auto;">
             <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column justify-content-center align-items-center flex-md-row background-div" style="background: #ffffff; font-family: system-ui; font-size: 27px; font-weight: bold; padding-bottom: 17px; width: 100%;">
-                <p class="d-flex flex-grow-1 justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center" style="font-family: system-ui; text-align: center; width: 100%; height: auto; font-size: 26px;">FMG564 - Matemáticas I</p>
+                <p class="d-flex flex-grow-1 justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center" style="font-family: system-ui; text-align: center; width: 100%; height: auto; font-size: 26px;">Pedro - 1098274</p>
                 <div class="d-flex d-md-flex justify-content-center" style="background: rgba(255, 159, 28, 0); width: 100%; height: auto;">
-                    <button class="btn btn-primary btn-project" type="button" style="background: #FF9F1C; font-family: system-ui; padding: 8px 40px; color: rgb(0, 0, 0); font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">Retirar</button>
+                    <button onclick="window.location.href = 'EstudianteConsultarAdministrador';" class="btn btn-primary btn-project" type="button" style="background: black; font-family: system-ui; padding: 8px 40px; color: white; font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">Consultar</button>
                 </div>
             </div>
             <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column justify-content-center align-items-center flex-md-row background-div" style="background: #ffffff; font-family: system-ui; font-size: 27px; font-weight: bold; padding-bottom: 17px; width: 100%;">
-                <p class="d-flex flex-grow-1 justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center" style="font-family: system-ui; text-align: center; width: 100%; height: auto; font-size: 26px;">IDS452 - Programación II</p>
+                <p class="d-flex flex-grow-1 justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center" style="font-family: system-ui; text-align: center; width: 100%; height: auto; font-size: 26px;">Maria - 1895784</p>
                 <div class="d-flex d-md-flex justify-content-center" style="background: rgba(255, 159, 28, 0); width: 100%; height: auto;">
-                    <button class="btn btn-primary btn-project" type="button" style="background: #FF9F1C; font-family: system-ui; padding: 8px 40px; color: rgb(0, 0, 0); font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">Retirar</button>
-                </div>
-            </div>
-            <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column justify-content-center align-items-center flex-md-row background-div" style="background: #ffffff; font-family: system-ui; font-size: 27px; font-weight: bold; padding-bottom: 17px; width: 100%;">
-                <p class="d-flex flex-grow-1 justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center" style="font-family: system-ui; text-align: center; width: 100%; height: auto; font-size: 26px;">Asignatura 2</p>
-                <div class="d-flex d-md-flex justify-content-center" style="background: rgba(255, 159, 28, 0); width: 100%; height: auto;">
-                    <button class="btn btn-primary btn-project" type="button" style="background: #FF9F1C; font-family: system-ui; padding: 8px 40px; color: rgb(0, 0, 0); font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">Retirar</button>
+                    <button onclick="window.location.href = 'EstudianteConsultarAdministrador';" class="btn btn-primary btn-project" type="button" style="background: black; font-family: system-ui; padding: 8px 40px; color: white; font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">
+                        <strong>Consultar</strong><br>
+                    </button>
                 </div>
             </div>
             <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column justify-content-center align-items-center flex-md-row background-div" style="background: #ffffff; font-family: system-ui; font-size: 27px; font-weight: bold; padding-bottom: 17px; width: 100%;">
                 <p class="d-flex flex-grow-1 justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center" style="font-family: system-ui; text-align: center; width: 100%; height: auto; font-size: 26px;">Asignatura 2</p>
                 <div class="d-flex d-md-flex justify-content-center" style="background: rgba(255, 159, 28, 0); width: 100%; height: auto;">
-                    <button class="btn btn-primary btn-project" type="button" style="background: #FF9F1C; font-family: system-ui; padding: 8px 40px; color: rgb(0, 0, 0); font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">Retirar</button>
+                    <button onclick="window.location.href = 'EstudianteConsultarAdministrador';" class="btn btn-primary btn-project" type="button" style="background: black; font-family: system-ui; padding: 8px 40px; color: white; font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px;">
+                        <strong>Consultar</strong><br>
+                    </button>
                 </div>
             </div>
         </section>
+        <div class="d-flex d-md-flex justify-content-center" style="background: rgba(255, 159, 28, 0); width: 100%; height: auto;">
+            <button onclick = "window.location.href = 'CrearNuevoUsuarioAdministrador';" class="btn btn-primary btn-project" type="button" style="background: black; font-family: system-ui; padding: 8px 40px; color: white; font-size: 20px; margin-left: 0px; height: auto; border-radius: 14px; margin-top: 31px;">Insertar Estudiante</button>
+        </div>
     </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
